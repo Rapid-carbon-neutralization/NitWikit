@@ -231,7 +231,7 @@ A12-A17/M1-M2 处理器的 iPhone，iPad 等在 iOS/iPadOS 14.0 beta 2 ~ 17.0 �
 
 U 盘
 
-你需要一个U 盘（大于32GB，重要数据已经备份）[rufus](rufus.ie)或者[ventoy](www.ventoy.net)还有Paleraln的ISO镜像文件，并且把他们下载到你的计算机上
+你需要一个U 盘（大于32GB，重要数据已经备份）[rufus](https://rufus.ie)或者[ventoy](https://www.ventoy.net)还有Paleraln的ISO镜像文件，并且把他们下载到你的计算机上
 
 rufus
 
