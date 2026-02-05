@@ -210,20 +210,52 @@ A12-A17/M1-M2 处理器的 iPhone，iPad 等在 iOS/iPadOS 14.0 beta 2 ~ 17.0 �
 
 :::
 
-| 越狱名称                                    | 支持版本 (iOS/iPad OS) | 支持芯片      |
-| ------------------------------------------- | ---------------------- | ------------- |
-| [Electra](https://coolstar.org/electra/)    | 11.0~11.1.2            | A9-A11        |
-| [Chimera](https://chimera.coolstar.org/)    | 12.0~12.5.5            | A9~A12        |
-| [Odyssey](https://theodyssey.dev/)          | 13.0~13.7              | A9~A13        |
-| [Unc0ver](https://unc0ver.dev/)             | 11.0~14.8              | A9~A14        |
-| [Taurine](https://taurine.app/)             | 14.0~14.8.1            | A9~A12        |
-| [Dopamine](https://ellekit.space/dopamine/) | 15.0~16.6.1\*          | A12~A16,M1~M2 |
-| [Checkraln](https://checkra.in/)            | 12.0~15.4.1            | A7~A11        |
-| [Paleraln](https://palera.in/)              | 15.0~?                 | A7~A11        |
+| 越狱名称                                     | 支持版本 (iOS/iPad OS) | 支持芯片          |
+| ---------------------------------------- | ------------------ | ------------- |
+| [Electra](https://coolstar.org/electra/) | 11.0~11.1.2        | A9-A11        |
+| [Chimera](https://chimera.coolstar.org/) | 12.0~12.5.5        | A9~A12        |
+| [Odyssey](https://theodyssey.dev/)       | 13.0~13.7          | A9~A13        |
+| [Unc0ver](https://unc0ver.dev/)          | 11.0~14.8          | A9~A14        |
+| [Taurine](https://taurine.app/)          | 14.0~14.8.1        | A9~A12        |
+| [Dopamine](https://ellekit.space/dopamine/) | 15.0~16.6.1\*      | A12~A16,M1,M2 |
+| [Checkraln](https://checkra.in/)         | 12.0~15.4.1        | A7~A11        |
+| [Paleraln](https://palera.in/)           | 15.0~?             | A7~A11        |
 
 \*Dopamine 到 iOS 16.6 - 16.6.1 不支持 A12 及更新版本的设备，iOS 16.5.1 - 16.6.1 不支持 A15-A16/M2 版本的设备。
 
 除了 Paleraln 和 Checkraln 需要使用 U 盘或者 Linux 或者 macOS，其他基本上就是签名->安装->打开->点 jailbreak 就可以了
 
 基本上就是 **安装 TrollStore** 第一个方法 1~11 步
-~~懒得写了~~
+
+#### Paleraln
+
+U 盘
+
+你需要一个U 盘（大于32GB，重要数据已经备份）[rufus](rufus.ie)或者[ventoy](www.ventoy.net)还有Paleraln的ISO镜像文件，并且把他们下载到你的计算机上
+
+rufus
+
+打开rufus，在“设备”里面选择你的U 盘，在“引导类型选择”里面选择镜像文件，点击“选择”选择你下载的Paleraln的ISO镜像文件
+
+![](../_assets/rufus_1.png)
+
+然后点击“开始”，选择以DD模式写入，点击“OK”
+
+![](../_assets/rufus_2.png)
+
+重启你的电脑到恢复模式，点击“疑难解答”，点击“高级选项”，点击UEFI固件设置（win10以后）
+
+![](../_assets/R_1.png)
+
+![](../_assets/R_2.png)
+
+![](../_assets/R_3.png)
+
+或者在开机时按下BIOS启动键
+
+找到“Boot”或者“启动”选项卡，把你的U 盘的启动顺序调整到第一
+
+连接你的设备到电脑，点击两次回车，使设备进入DFU模式（屏幕上会有提示）
+
+![](../_assets/U_1.png)
+![](../_assets/U_2.png)
