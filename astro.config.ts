@@ -641,7 +641,7 @@ export default defineConfig({
                                                     items: [
                                                         "java/process/mobile-player/client/intro",
                                                         "java/process/mobile-player/client/amethyst-ios",
-                                                        "java/process/mobile-player/client/amethyst-ios",
+                                                        "java/process/mobile-player/client/android-all",
                                                         "java/process/mobile-player/client/pcl"
                                                         
                                                     ]
