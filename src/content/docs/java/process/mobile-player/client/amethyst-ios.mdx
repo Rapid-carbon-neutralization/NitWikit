@@ -254,11 +254,15 @@ import { Steps } from "@astrojs/starlight/components";
 
 \*Dopamine 到 iOS 16.6 - 16.6.1 不支持 A12 及更新版本的设备，iOS 16.5.1 - 16.6.1 不支持 A15-A16/M2 版本的设备。
 
-除了 Palera1n 和 Checkra1n 需要使用 U 盘或者 Linux 或者 macOS，其他基本上就是签名 -> 安装 -> 打开 -> 点 jailbreak 就可以了
-
-基本上就是 **安装 TrollStore** 第一个方法 1~11 步
+除了 Palera1n 和 Checkra1n 需要使用 U 盘或者 Linux 或者 macOS，其他基本上就是像 Dopamine 那样的安装方法。
 
 ### 使用 Palera1n
+
+这只是U盘的使用流程，如果你是 Linux 或者 macOS 你应该使用他们自己的安装方法。
+
+如果你的苹果设备是 A11 设备那么您必须禁用您的密码，并且在恢复原来的样子之前您将无法使用密码或其他 SEP 功能。SEP 功能包括密码、面容 ID/触控 ID 和 Apple Pay 等。
+
+另外，如果您的设备是运行 iOS 16 的 A11 设备，并且之前设置过密码，那么您需要抹掉所有内容和设置才能进行越狱。
 
 <Steps>
 
@@ -284,10 +288,62 @@ import { Steps } from "@astrojs/starlight/components";
 
 5.  找到“Boot”或者“启动”选项卡，把你的 U 盘的启动顺序调整到第一
 
-6.  连接你的设备到电脑，点击两次回车，使设备进入 DFU 模式（屏幕上会有提示）
+6.  连接你的设备到电脑，点击两次回车，你需要使设备进入 DFU 模式（屏幕上会有英文提示）
 
         ![](../_assets/amethyst-ios/U_1.png)
         ![](../_assets/amethyst-ios/U_2.png)
         ![](../_assets/amethyst-ios/U_3.png)
+
+</Steps>
+
+#### Linux 和 macOS 使用方法
+
+<Steps>
+
+1. 使用下面的命令进行安装
+
+   ```bash
+   sudo /bin/sh -c "$(curl -fsSL https://static.palera.in/scripts/install.sh)"
+   ```
+
+2. 使用下面的命令来使用palera1n
+   ```bash
+   #Linux
+   sudo systemctl stop usbmuxd
+   sudo usbmuxd -f -p
+   #将你的苹果设备连接到电脑，并且你需要使设备进入 DFU 模式（屏幕上会有英文提示）
+   sudo palera1n -l
+   #macOS
+   #将你的苹果设备连接到电脑，并且你需要使设备进入 DFU 模式（屏幕上会有英文提示）
+   palera1n -l
+   ```
+
+</Steps>
+
+如果成功后你就会在你的手机上看见一个叫 palera1n 的应用程序，在里面安装好 Sideo 并且设置 root 密码就可以了
+
+（ root 密码非常重要，最好简单好记）
+
+然后从此 [链接](https://github.com/AngelAuraMC/Amethyst-iOS/actions) 下载 Amethyst 的 ipa 安装包。**（需要使用 GitHub 账号才能继续下载）**
+
+使用爱思助手安装它（不要使用 AppSync Unified 插件，会导致一些[问题](https://github.com/akemin-dayo/AppSync/issues/108)）
+
+### 使用 Dopamine
+
+<Steps>
+
+1.你需要查看[**安装 TrollStore**](https://nitwikit.8aka.cn/java/process/mobile-player/client/amethyst-ios/#%E5%AE%89%E8%A3%85-trollstore)第一个方法 1~11 步,将 Dopamine 安装到你的手机上
+
+2.打开 Dopamine ，点击越狱按钮，选择包管理器为 Sideo ，设置 root 密码
+
+    ![](../_assets/amethyst-ios/Dopamine_1.png)
+
+    ![](../_assets/amethyst-ios/Dopamine_2.png)
+
+    ![](../_assets/amethyst-ios/Dopamine_3.png)
+
+3.从此 [链接](https://github.com/AngelAuraMC/Amethyst-iOS/actions) 下载 Amethyst 的 ipa 安装包。**（需要使用 GitHub 账号才能继续下载）**
+
+4.使用爱思助手安装它（不要使用 AppSync Unified 插件，会导致一些[问题](https://github.com/akemin-dayo/AppSync/issues/108)）
 
 </Steps>
