@@ -10,8 +10,8 @@ title: PlaceHolderAPI
 
 ![](_assets/PlaceHolderAPI/2.png)
 
-[![](_assets/PlaceHolderAPI/3.png)](https://continue-project.netlify.app/PlaceholderAPI)
-[![](_assets/PlaceHolderAPI/4.png)](https://continue-project.netlify.app/PlaceholderAPI/user-guides.placeholder-list.html)
+[![](_assets/PlaceHolderAPI/3.png)](https://continue-project.netlify.app/wiki/PlaceholderAPI)
+[![](_assets/PlaceHolderAPI/4.png)](https://continue-project.netlify.app/wiki/PlaceholderAPI/user-guides/placeholder-list.html)
 [![](_assets/PlaceHolderAPI/5.png)](https://api.extendedclip.com/home)
 
 </div>
@@ -217,7 +217,7 @@ eCloud 命令
 
 `文档 (英文)` https://wiki.placeholderapi.com
 
-`文档 (中文)` https://continue-project.netlify.app/PlaceholderAPI
+`文档 (中文)` https://continue-project.netlify.app/wiki/PlaceholderAPI
 
 `插件百科` https://mineplugin.org/PlaceHolderAPI
 
