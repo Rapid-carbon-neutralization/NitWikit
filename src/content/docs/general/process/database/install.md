@@ -4,8 +4,6 @@ sidebar:
     order: 2
 ---
 
-# 安装
-
 ## MYSQL
 
 ### Windows
