@@ -132,7 +132,9 @@ import { Tabs, TabItem, Steps } from '@astrojs/starlight/components';
    systemctl restart mysql #重启
    ```
 
-    在 `MySQL` 服务器的首次启动时，如果服务器的数据目录为空，将会发生以下情况。
+   在 `MySQL` 服务器的首次启动时，如果服务器的数据目录为空，将会发生以下情况。
+
+   （ `Debian` 系用户可以跳过查看超级用户密码和重新设置超级用户密码的步骤）
 
    - 服务器将被初始化。
    - SSL 证书和密钥文件将在数据目录中生成。
@@ -154,7 +156,7 @@ import { Tabs, TabItem, Steps } from '@astrojs/starlight/components';
 
 ### Docker
 
-（个人建议使用 `Linux` 上的 `Docker` ，不建议使用此方法。）
+（个人建议如果你要使用 `Docker` 部署，请使用 `Linux` 上的 `Docker` ，并且我不建议使用 `Docker` 部署。）
 
 拉取镜像的命令：
 
