@@ -5,46 +5,54 @@ sidebar:
 ---
 
 import { Tabs, TabItem } from '@astrojs/starlight/components';
+import { Steps } from '@astrojs/starlight/components';
 
 <Tabs>
    <TabItem label="MYSQL">
+
 ### Windows
 
-点击[这里](https://dev.mysql.com/downloads/installer/)下载Windows的安装包，带Web的是在线安装包，比离线安装包要小一点
+<Steps>
 
-你为服务器安装的话，基本上第一个选server only就行，他自带的客户端不怎么好用，最大的缺点就是对中文用户不友好
+1. 点击[这里](https://dev.mysql.com/downloads/installer/)下载 `Windows` 的安装包，带 `Web` 的是在线安装包，比离线安装包要小一点
+
+你为服务器安装的话，基本上第一个选 `server only` 就行，他自带的客户端不怎么好用，最大的缺点就是对中文用户不友好
 
 ![](./_assets/MYSQL_1.png)
 
-这里直接下一步，然后你可以看到你可以设置安装路径和数据存储路径，请按需改。
+2. 这里直接下一步，然后你可以看到你可以设置安装路径和数据存储路径，请按需改。
 
 ![](./_assets/MYSQL_2_+.png)
 
-下一步然后点 Execute ，然后一路下一步，来到这个界面，这里Config Type我们选Server Computer，其他设置按照你自己需求更改，然后Next。
+3. 下一步然后点 Execute ，然后一路下一步，来到这个界面，这里 `Config Type` 我们选 `Server Computer` ，其他设置按照你自己需求更改，然后Next。
 
 ![](./_assets/MYSQL_2.png)
 
 ![](./_assets/MYSQL_3.png)
 
-这里我们直接默认就好了，Next
+4. 这里我们直接默认就好了，Next
 
 ![](./_assets/MYSQL_4.png)
 
-接下来就是设置你的root密码，切勿忘记，然后你在下方还可以设置其他用户，我建议你使用工具来创建对应数据库的对应用户
+5. 接下来就是设置你的 `root` 密码，切勿忘记，然后你在下方还可以设置其他用户，我建议你使用工具来创建对应数据库的对应用户
 
 ![](./_assets/MYSQL_5.png)
 
-这个页面我们直接Next，基本上不需要配置什么
+6. 这个页面我们直接Next，基本上不需要配置什么
 
 ![](./_assets/MYSQL_6.png)
 
 ![](./_assets/MYSQL_7.png)
 
-点 Execute ，又点 Execute 然后你就安装成功了
+7. 点 Execute ，又点 Execute 然后你就安装成功了
+
+</Steps>
 
 ### Linux
 
-在[这里](https://dev.mysql.com/downloads/)下载 yum 或者 apt 的仓库，并且把这个文件放到你机器上的文件夹里
+<Steps>
+
+1. 在[这里](https://dev.mysql.com/downloads/)下载 `yum` 或者 `apt` 的仓库，并且把这个文件放到你机器上的文件夹里
 
 安装仓库的命令：
 
@@ -59,14 +67,14 @@ sudo dnf localinstall <你刚才下载文件的绝对路径>
 
 Debian 系的额外步骤：`sudo apt-get update`
 
-选择版本：
+2. 选择版本：
 
 ```bash
 # 适用于 Debian 系
 sudo dpkg-reconfigure mysql-apt-config
 # 它会弹出一个东西让你选择的，选择自己想要的版本，然后点Ok。
 sudo apt-get update
-# 适用于 Redhat 系
+# 适用于 Red Hat 系
 yum repolist all | grep mysql
 # 或者使用 dnf
 dnf repolist all | grep mysql
@@ -80,7 +88,7 @@ sudo dnf config-manager --disable <子仓库>
 sudo dnf config-manager --enable <子仓库>
 ```
 
-确认正确的子仓库已被启用， 通过执行以下命令并检查其输出（对于支持DNF的系统，命令中的 **Yum** 替换为 **DNF** ）
+确认正确的子仓库已被启用， 通过执行以下命令并检查其输出（对于支持DNF的系统，命令中的 `Yum` 替换为 `DNF` ）
 
 ```bash
 yum repolist enabled | grep mysql
@@ -88,7 +96,7 @@ yum repolist enabled | grep mysql
 
 :::tip
 
-基于EL8的系统，如RHEL8和Oracle。 Linux 8 包含默认启用的 MySQL 模块。 除非该模块被禁用，否则它会掩盖以下提供的包 MySQL 仓库。要禁用附带的模块并 MySQL 仓库包可见，请使用以下命令（对于支持DNF的系统，将命令中的 **Yum** 替换为 **DNF** ）
+基于 `EL8` 的系统，如 `RHEL8` 和 `Oracle` 。  `Linux 8`  包含默认启用的  `MySQL`  模块。 除非该模块被禁用，否则它会掩盖以下提供的包 `MySQL` 仓库。要禁用附带的模块并 `MySQL` 仓库包可见，请使用以下命令（对于支持DNF的系统，将命令中的 `Yum` 替换为 `DNF` ）
 
 ```bash
 sudo yum module disable mysql
@@ -96,21 +104,21 @@ sudo yum module disable mysql
 
 :::
 
-安装 MYSQL
+3. 安装 `MySQL`
 
 ```bash
 # 适用于 Debian 系
 sudo apt-get install mysql-server
 # 这会安装 MySQL 服务器的包，以及客户端和数据库的通用文件包。
 # 安装的过程中会要求你输入你 MySQL root 用户密码。
-# 适用于 Redhat 系
+# 适用于 Red Hat 系
 sudo yum install mysql-community-server
 # 或者
 sudo dnf install mysql-community-server
 # 这将安装 MySQL 服务器的软件包 (mysql-community-server)，以及运行服务器所需的组件软件包，包括客户端软件包 (mysql-community-client)、客户端和服务器的通用错误消息和字符集 (mysql-community-common) 以及共享客户端库 (mysql-community-libs)。
 ```
 
-启动 MySQL 服务器和停止 MySQL 服务器
+4. 启动 `MySQL` 服务器和停止 `MySQL` 服务器
 
 ```bash
 systemctl start mysqld #启动
@@ -119,7 +127,7 @@ systemctl status mysqld #状态查看
 systemctl restart mysqld #重启
 ```
 
- 在 MYSQL 服务器的首次启动时，如果服务器的数据目录为空，将会发生以下情况。
+ 在 `MySQL` 服务器的首次启动时，如果服务器的数据目录为空，将会发生以下情况。
 
 - 服务器将被初始化。
 - SSL 证书和密钥文件将在数据目录中生成。
@@ -130,16 +138,18 @@ systemctl restart mysqld #重启
 sudo grep 'temporary password' /var/log/mysqld.log
 ```
 
-尽快更改 root 密码，方法是使用生成的临时密码登录并为超级用户帐户设置自定义密码。
+  5.尽快更改 root 密码，方法是使用生成的临时密码登录并为超级用户帐户设置自定义密码。
 
 ```bash
 $> mysql -uroot -p
 mysql> ALTER USER 'root'@'localhost' IDENTIFIED BY '<自定义密码>';
 ```
 
+</Steps>
+
 ### Docker
 
-（个人建议使用 Linux 上的 Docker ，不建议使用此方法。）
+（个人建议使用 `Linux` 上的 `Docker` ，不建议使用此方法。）
 
 拉取镜像的命令：
 
@@ -159,21 +169,27 @@ docker run --name=<容器名称> --restart on-failure -d container-registry.orac
 
 ### Windows
 
-请你把你电脑上的 WSL 功能打开
+<Steps>
 
-点击[这里](https://www.docker.com/products/docker-desktop/)下载并安装 docker desktop ，并且进行配置。
+  1.请你把你电脑上的 WSL 功能打开
 
-在 Windows 上，确保 Docker 配置为运行基于 Linux 的容器。
+  2.点击[这里](https://www.docker.com/products/docker-desktop/)下载并安装 docker desktop ，并且进行配置。
 
-要使用镜像启动 Redis 开源服务器，请在终端中执行以下命令：
+  3.在 Windows 上，确保 Docker 配置为运行基于 Linux 的容器。
+
+  4.要使用镜像启动 Redis 服务器，请在终端中执行以下命令：
 
 ```bash
 docker run -d --name redis -p 6379:6379 redis:<版本号>
 ```
 
+</Steps>
+
 ### Linux
 
-适用于 Debian 系
+<Steps>
+
+1. 适用于 `Debian` 系
 
 ```bash
 sudo apt-get install lsb-release curl gpg
@@ -184,11 +200,11 @@ sudo apt-get update
 sudo apt-get install redis
 ```
 
-适用于 Redhat 系
+适用于 `Red Hat` 系
 
 在 `/etc/yum.repos.d` 创建包含以下内容的 `redis.repo` 文件
 
-适用于 Rocky Linux 9 和 AlmaLinux 9
+适用于 `Rocky Linux 9` 和 `AlmaLinux 9`
 
 ```repo
 [Redis]
@@ -198,7 +214,7 @@ enabled=1
 gpgcheck=1
 ```
 
-适用于 Rocky Linux 8 和 AlmaLinux 8
+适用于 `Rocky Linux 8` 和 `AlmaLinux 8`
 
 ```repo
 [Redis]
@@ -216,12 +232,14 @@ sudo rpm --import /tmp/redis.key
 sudo yum install redis
 ```
 
-Redis不会自动启动，也不会在启动时启动。为此，请执行以下命令。
+2. `Redis` 不会自动启动，也不会在启动时启动。为此，请执行以下命令。
 
 ```bash
 sudo systemctl enable redis #启用 Redis
 sudo systemctl start redis #启动 Redis
 ```
+
+</Steps>
 
 ### Docker
 
@@ -230,7 +248,150 @@ docker run -d --name redis -p 6379:6379 redis:<版本号>
 ```
 
   </TabItem>
-</Tabs>
+
+  <TabItem label="MariaDB">
+
+### Windows
+
+<Steps>
+
+1. [下载](https://mariadb.com/downloads/)并且打开 `MariaDB` 安装程序
+
+![](./_assets/MDB_1.png)
+
+2. 同意最终用户许可协议
+
+![](./_assets/MDB_2.png)
+
+3. 选择功能和安装目录（ Development components 和 Third party tools 可以不安装）
+
+![](./_assets/MDB_3.png)
+
+4. 为 `root` 用户设置密码和设置数据存储目录
+
+![](./_assets/MDB_4.png)
+
+5. 将 `MariaDB` 配置为服务并设置端口
+
+![](./_assets/MDB_5.png)
+
+</Steps>
+
+### Linux
+
+<Steps>
+
+1. 安装 `MariaDB`
+
+```bash
+#适用于 Debian 系
+sudo apt install mariadb-server mariadb-client galera-4
+#适用于 Red Hat 系
+sudo dnf install mariadb mariadb-server
+```
+
+安装后，运行命令设置根密码，删除匿名用户，并禁用远程 `root` 登录。
+
+```bash
+sudo mariadb-secure-installation
+```
+
+2. 启动并验证服务：
+
+`MariaDB` 通常在安装后会自动启动。你可以查看状态，必要时手动启动。
+
+检查状态：
+
+```bash
+sudo systemctl status mariadb
+```
+
+启动服务（如果不运行）：
+
+```bash
+sudo systemctl start mariadb
+```
+
+通过连接 `root` 用户验证安装
+
+```bash
+mariadb -u root -p
+```
+
+输入你在安全安装时设置的 `root` 密码
+
+</Steps>
+
+  </TabItem>
+
+  <TabItem label="PostgreSQL">
+
+### Windows
+
+<Steps>
+
+1. [下载](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads) `PostgreSQL` 的安装程序并打开
+
+![](./_assets/PGSQL_1.png)
+
+2. 设置安装路径
+
+![](./_assets/PGSQL_2.png)
+
+3. 选择要安装的功能
+
+![](./_assets/PGSQL_3.png)
+
+4. 设置数据存储目录
+
+![](./_assets/PGSQL_4.png)
+
+5. 设置 `root` 密码
+
+![](./_assets/PGSQL_5.png)
+
+6. 设置服务端口
+
+![](./_assets/PGSQL_6.png)
+
+7. 设置地区
+
+![](./_assets/PGSQL_7.png)
+
+8. 只需要下一步你的安装就完成了
+
+</Steps>
+
+### Linux
+
+```bash
+#适用于 Debian 系
+apt install postgresql
+#适用于 Red Hat 系
+dnf install postgresql-server
+```
+
+:::tip
+
+想获得任何版本的`PostgreSQL`吗？
+
+```bash
+#适用于 Debian 系
+sudo apt install -y postgresql-common
+sudo /usr/share/postgresql-common/pgdg/apt.postgresql.org.sh
+sudo apt update
+sudo apt install postgresql-<版本号>
+```
+
+`Red Hat` 系需要去 `PostgreSQL` 的下载官网去生成脚本
+
+:::
+
+  </TabItem>
+
+  </Tabs>
+
+
 ## 使用工具安装
 
 我会告诉你比较简单的几种安装数据库的方法
