@@ -170,6 +170,7 @@ docker pull mysql:<要安装的版本>
 docker run --name=<容器名称> \
   -e MYSQL_ROOT_PASSWORD=<root用户密码> \
   --restart on-failure \
+  -p 3306:3306 \
   -d \
   -v <数据在你机器上的存放位置>:/var/lib/mysql \
   -v <配置目录在你机器上的存放位置>:/etc/mysql/conf.d \
@@ -348,6 +349,19 @@ docker run -d \
 
 </Steps>
 
+### Docker
+
+```bash
+docker run --name=<容器名称> \
+  -e MYSQL_ROOT_PASSWORD=<root用户密码> \
+  --restart on-failure \
+  -d \
+  -p 3306:3306 \
+  -v <数据在你机器上的存放位置>:/var/lib/mysql \
+  -v <配置目录在你机器上的存放位置>:/etc/mysql/conf.d \
+  mariadb:<版本号>
+```
+
   </TabItem>
 
   <TabItem label="PostgreSQL">
@@ -412,6 +426,18 @@ sudo apt install postgresql-<版本号>
 `Red Hat` 系需要去 `PostgreSQL` 的下载官网去生成脚本
 
 :::
+
+### Docker
+
+```bash
+docker run --name=<容器名称> \
+  -e POSTGRES_PASSWORD=<root用户密码> \
+  --restart on-failure \
+  -d \
+  -p 5432:5432 \
+  -v <数据在你机器上的存放位置>:/var/lib/postgresql \
+  postgres:<版本号>
+```
 
   </TabItem>
 
