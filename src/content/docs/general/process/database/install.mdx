@@ -13,7 +13,7 @@ import { Tabs, TabItem, Steps } from '@astrojs/starlight/components';
 
 <Steps>
 
-1. 点击[这里](https://dev.mysql.com/downloads/installer/)下载 `Windows` 的安装包，带 `Web` 的是在线安装包，比离线安装包要小一点
+1. 点击 [这里](https://dev.mysql.com/downloads/installer/) 下载 `Windows` 的安装包，带 `Web` 的是在线安装包，比离线安装包要小一点
 
    你为服务器安装的话，基本上第一个选 `server only` 就行，他自带的客户端不怎么好用，最大的缺点就是对中文用户不友好
 
@@ -23,7 +23,7 @@ import { Tabs, TabItem, Steps } from '@astrojs/starlight/components';
 
    ![](./_assets/MYSQL_2_+.png)
 
-3. 下一步然后点 Execute ，然后一路下一步，来到这个界面，这里 `Config Type` 我们选 `Server Computer` ，其他设置按照你自己需求更改，然后Next。
+3. 下一步然后点 Execute，然后一路下一步，来到这个界面，这里 `Config Type` 我们选 `Server Computer`，其他设置按照你自己需求更改，然后 Next。
 
    ![](./_assets/MYSQL_2.png)
 
@@ -37,13 +37,13 @@ import { Tabs, TabItem, Steps } from '@astrojs/starlight/components';
 
    ![](./_assets/MYSQL_5.png)
 
-6. 这个页面我们直接Next，基本上不需要配置什么
+6. 这个页面我们直接 Next，基本上不需要配置什么
 
    ![](./_assets/MYSQL_6.png)
 
    ![](./_assets/MYSQL_7.png)
 
-7. 点 Execute ，又点 Execute 然后你就安装成功了
+7. 点 Execute，又点 Execute 然后你就安装成功了
 
 </Steps>
 
@@ -51,7 +51,7 @@ import { Tabs, TabItem, Steps } from '@astrojs/starlight/components';
 
 <Steps>
 
-1. 在[这里](https://dev.mysql.com/downloads/)下载 `yum` 或者 `apt` 的仓库，并且把这个文件放到你机器上的文件夹里
+1. 在 [这里](https://dev.mysql.com/downloads/) 下载 `yum` 或者 `apt` 的仓库，并且把这个文件放到你机器上的文件夹里
 
    安装仓库的命令：
 
@@ -71,7 +71,7 @@ import { Tabs, TabItem, Steps } from '@astrojs/starlight/components';
    ```bash
    # 适用于 Debian 系
    sudo dpkg-reconfigure mysql-apt-config
-   # 它会弹出一个东西让你选择的，选择自己想要的版本，然后点Ok。
+   # 它会弹出一个东西让你选择的，选择自己想要的版本，然后点 Ok。
    sudo apt-get update
    # 适用于 Red Hat 系
    yum repolist all | grep mysql
@@ -87,7 +87,7 @@ import { Tabs, TabItem, Steps } from '@astrojs/starlight/components';
    sudo dnf config-manager --enable <子仓库>
    ```
 
-   确认正确的子仓库已被启用， 通过执行以下命令并检查其输出（对于支持DNF的系统，命令中的 `Yum` 替换为 `DNF` ）
+   确认正确的子仓库已被启用，通过执行以下命令并检查其输出（对于支持 dnf 的系统，命令中的 `yum` 替换为 `dnf` ）
 
    ```bash
    yum repolist enabled | grep mysql
@@ -95,7 +95,7 @@ import { Tabs, TabItem, Steps } from '@astrojs/starlight/components';
 
    :::tip
 
-   基于 `EL8` 的系统，如 `RHEL8` 和 `Oracle` 。  `Linux 8`  包含默认启用的  `MySQL`  模块。 除非该模块被禁用，否则它会掩盖以下提供的包 `MySQL` 仓库。要禁用附带的模块并 `MySQL` 仓库包可见，请使用以下命令（对于支持DNF的系统，将命令中的 `Yum` 替换为 `DNF` ）
+   基于 `EL8` 的系统，如 `RHEL8` 和 `Oracle`。`Linux 8` 包含默认启用的 `MySQL` 模块。除非该模块被禁用，否则它会掩盖以下提供的包 `MySQL` 仓库。要禁用附带的模块并 `MySQL` 仓库包可见，请使用以下命令（对于支持 dnf 的系统，将命令中的 `yum` 替换为 `dnf` ）
 
    ```bash
    sudo yum module disable mysql
@@ -134,7 +134,7 @@ import { Tabs, TabItem, Steps } from '@astrojs/starlight/components';
 
    在 `MySQL` 服务器的首次启动时，如果服务器的数据目录为空，将会发生以下情况。
 
-   （ `Debian` 系用户可以跳过查看超级用户密码和重新设置超级用户密码的步骤）
+   （`Debian` 系用户可以跳过查看超级用户密码和重新设置超级用户密码的步骤）
 
    - 服务器将被初始化。
    - SSL 证书和密钥文件将在数据目录中生成。
@@ -188,7 +188,7 @@ docker run --name=<容器名称> \
 
 1. 请你把你电脑上的 WSL 功能打开
 
-2. 点击[这里](https://www.docker.com/products/docker-desktop/)下载并安装 docker desktop ，并且进行配置。
+2. 点击 [这里](https://www.docker.com/products/docker-desktop/) 下载并安装 Docker Desktop，并且进行配置。
 
 3. 在 Windows 上，确保 Docker 配置为运行基于 Linux 的容器。
 
@@ -282,7 +282,7 @@ docker run -d \
 
 <Steps>
 
-1. [下载](https://mariadb.com/downloads/)并且打开 `MariaDB` 安装程序
+1. [下载](https://mariadb.com/downloads/) 并且打开 `MariaDB` 安装程序
 
    ![](./_assets/MDB_1.png)
 
@@ -290,7 +290,7 @@ docker run -d \
 
    ![](./_assets/MDB_2.png)
 
-3. 选择功能和安装目录（ Development components 和 Third party tools 可以不安装）
+3. 选择功能和安装目录（Development components 和 Third party tools 可以不安装）
 
    ![](./_assets/MDB_3.png)
 
@@ -413,7 +413,7 @@ dnf install postgresql-server
 
 :::tip
 
-想获得任何版本的`PostgreSQL`吗？
+想获得任何版本的 `PostgreSQL` 吗？
 
 ```bash
 #适用于 Debian 系
