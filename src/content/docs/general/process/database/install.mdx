@@ -78,8 +78,7 @@ import { Tabs, TabItem, Steps } from '@astrojs/starlight/components';
    # 或者使用 dnf
    dnf repolist all | grep mysql
    # 执行完这个命令以后，你会在终端里看到一长串的子仓库。
-   # 我们只用安装 8.X LTS 版本，此版本对 mc 插件支持较好。
-   # 9.X长期支持版本2026年4月才出来，虽然已经有新插件兼容了这一方面，但是老插件还是使用的JDBC 8，可能有一些不兼容性，最稳妥的方式还是使用8.X
+   # 建议使用 9.7 LTS 版本
    # 下面的命令可以用来禁用子仓库和启用子仓库。
    sudo yum-config-manager --disable <子仓库>
    sudo yum-config-manager --enable <子仓库>
