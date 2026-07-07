@@ -121,15 +121,15 @@ import { Tabs, TabItem, Steps } from '@astrojs/starlight/components';
 
    ```bash
    # 适用于 Debian 系
-   systemctl start mysqld #启动
-   systemctl stop mysqld #停止
-   systemctl status mysqld #状态查看
-   systemctl restart mysqld #重启
-   # 适用于 Red Hat 系
    systemctl start mysql #启动
    systemctl stop mysql #停止
    systemctl status mysql #状态查看
    systemctl restart mysql #重启
+   # 适用于 Red Hat 系
+   systemctl start mysqld #启动
+   systemctl stop mysqld #停止
+   systemctl status mysqld #状态查看
+   systemctl restart mysqld #重启
    ```
 
    在 `MySQL` 服务器的首次启动时，如果服务器的数据目录为空，将会发生以下情况。
@@ -311,7 +311,7 @@ docker run -d \
 
    ```bash
    #适用于 Debian 系
-   sudo apt install mariadb-server mariadb-client galera-4
+   sudo apt install mariadb-server
    #适用于 Red Hat 系
    sudo dnf install mariadb mariadb-server
    ```
