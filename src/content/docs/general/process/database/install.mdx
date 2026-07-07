@@ -251,7 +251,13 @@ docker run --name=<容器名称> -e MYSQL_ROOT_PASSWORD=<root用户密码> --res
 ### Docker
 
 ```bash
-docker run -d --name redis -p 6379:6379 redis:<版本号> -v type=bind,src=<数据在你机器上的存放位置>,dst=/data type=bind,src=<配置在你机器上的存放位置>,dst=/etc/redis/redis.conf type=bind,src=<日志在你机器上的存放位置>,dst=/etc/redis/redis.conf
+docker run -d \
+  --name redis \
+  -p 6379:6379 \
+  -v <数据在你机器上的存放位置>:/data \
+  -v <配置目录在你机器上的存放位置>:/usr/local/etc/redis \
+  redis:<版本号> \
+  redis-server /usr/local/etc/redis/redis.conf
 ```
 
   </TabItem>
